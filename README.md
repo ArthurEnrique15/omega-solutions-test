@@ -263,14 +263,17 @@ Coverage reports are generated in the `coverage/` directory and include:
 - LCOV format for CI/CD integration
 
 ### Test Structure
-Tests are located in `__tests__` directories next to the files they test:
+Tests are colocated with the files they test using the `.spec.ts` extension:
 ```
 src/services/
-├── create-user.service.ts
-├── authenticate-user.service.ts
-└── __tests__/
-    ├── create-user.service.test.ts
-    └── authenticate-user.service.test.ts
+├── create-user/
+│   ├── create-user.service.ts
+│   ├── create-user.service.spec.ts
+│   └── index.ts
+└── authenticate-user/
+    ├── authenticate-user.service.ts
+    ├── authenticate-user.service.spec.ts
+    └── index.ts
 ```
 
 ### Writing Tests
